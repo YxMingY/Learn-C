@@ -19,7 +19,24 @@ int main()
 	char unit = 'm';
 	printf("小明今年%d岁\n", age);
 	printf("小明身高%f%c\n", height, unit);
-	   printf("小明现在在慕课网上学习IT技术"); 
-	   printf("小铭的一个月是零花钱只有%d元",MONEY);
+	   printf("小明现在在慕课网上学习IT技术\n"); 
+	   printf("小铭的一个月是零花钱只有%d元\n",MONEY);
+    char c = 'a';
+    int n = c;    //将c赋值给n
+    float f = c;     //将c赋值给f
+    double d = c;   //将c赋值给d
+    printf("%d\n",n);
+    printf("%f\n",f);
+    printf("%lf\n",d);
+    double num = 2.5;      //定义浮点型变量num并赋值为2.5
+    printf("num的整数部分是%d\n", (int)num);
+    int x,y;
+    x = 10;
+    y = -3;
+    printf("x+y=%d\n",x+y);  
+    printf("x-y=%d\n",x-y);
+    printf("x*y=%d\n",x*y);
+    printf("x/y=%d\n",x/y);
+    printf("x%y=%d\n",x%y);
 	return 0;
 }
