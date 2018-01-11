@@ -57,9 +57,50 @@ int main()
         if(hd*hd*hd+td*td*td+sd*sd*sd == num)
         {
             printf("水仙花数字：%d\n", num);    
-        }/*else{
-        	printf("%d\n%d\n%d\n",hd,td,sd);
-        }*/
+        }
+    }
+    int num = 0;  //定义计算结果变量sum
+    int ii = 1;    //定义循环数字变量i
+    int flag = 0; //定义符号状态变量flag
+ 
+    //使用while循环
+    while(ii<=100)
+    {
+    	if(flag==0){
+    		num = ii + num;
+    		flag = 1;    		
+    	}else{
+        	num = num - ii;
+        	flag = 0;
+        }
+        ii++;
+	}
+	printf("%d\n",num);
+	
+	    // 定义相乘数字i,j以及结果result
+    int j1, j2, result;
+    /*
+     * 使用for循环解决本题相对简单哦~
+    */
+    for(j1=9;j1>0;j1--){
+    	j2=1;
+    	while(j2<=j1){
+    		result=j1*j2;
+    		if(j2<j1){
+    			printf("%d*%d=%d ",j1,j2,result);
+    			j2++;
+    		}else{
+    			printf("%d*%d=%d\n",j1,j2,result);
+    			j2++;
+    		}
+    	}
+    }
+    int go=0;
+    HERE:
+    if(go<5){
+    	printf("gogogo");
+    	go++;
+    	goto HERE;
     }
     return 0;    
 }
