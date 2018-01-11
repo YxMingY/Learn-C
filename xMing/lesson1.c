@@ -2,6 +2,60 @@
 //我是注释
 /*我和PHP的注释一样哦*/
 # define MONEY 10
+/*C语言中存储类别又分为四类：自动（auto）、静态（static）、寄存器的（register）和外部的（extern）。*/
+int strl(){
+	printf("C语言有用的字符串函数: 
+	strlen(str)
+	strcpy(str1,str2)
+	strcat(str1,str2)
+	");
+}
+int echo(str){
+	printf("%s\n",str);
+}
+int main2(){
+	echo("233");
+	px();
+	char st1[]="\nC语言令人心累的char数组";
+	puts(st1);
+	printf("%s\n",st1);
+	strl();
+}
+int px()
+{
+    double arr[]={1.78, 1.77, 1.82, 1.79, 1.85, 1.75, 1.86, 1.77, 1.81, 1.80};
+    int i,j;
+    printf("\n************排队前*************\n");
+    for(i=0;i<10;i++)
+    {
+        if(i != 9)   
+            printf("%.2f, ", arr[i]);  //%.2f表示小数点后精确到两位
+        else
+            printf("%.2f", arr[i]);    //%.2f表示小数点后精确到两位
+    }
+    for(i=10; i>=0; i--)
+    {
+        for(j=0;j<=i;j++)
+        {
+            if(arr[i]>arr[j])      //当前面的数比后面的数大时
+            {
+                double temp;    //定义临时变量temp
+              temp=arr[i];//将前面的数赋值给temp
+arr[i]=arr[j];//前后之数颠倒位置
+arr[j]=temp;  //将较大的数放在后面    
+            }                 
+        }                
+    }
+    printf("\n************排队后*************\n");
+    for(i=0;i<10;i++)
+    {
+        if(i != 9)   
+            printf("%.2f, ", arr[i]);  //%.2f表示小数点后精确到两位     
+        else
+            printf("%.2f", arr[i]);    //%.2f表示小数点后精确到两位
+    }
+    return 0;    
+}
 int main()
 {
 	printf("第一课");
@@ -102,5 +156,7 @@ int main()
     	go++;
     	goto HERE;
     }
-    return 0;    
+    printf("\n现在开始运行main2\n");
+    main2();
+    return 0;
 }
