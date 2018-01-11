@@ -38,5 +38,28 @@ int main()
     printf("x*y=%d\n",x*y);
     printf("x/y=%d\n",x/y);
     printf("x%y=%d\n",x%y);
-	return 0;
+    int i=0;
+    while(i<5){
+    	printf("吃第%d碗面\n",++i);
+    }
+    printf("吃饱了，隔\n");
+        int num, sd, td, hd;
+    //循环所有三位数
+    for(num=100;num<1000;num++)
+    {
+        //获取三位数字num百位上的数字
+        hd =num/100;
+        //获取三位数字num十位上的数字
+        td =(num-(num/100)*100)/10;
+        //获取三位数字num个位上的数字
+        sd =(num-(num/100)*100)-td*10;
+        //水仙花数的条件是什么？
+        if(hd*hd*hd+td*td*td+sd*sd*sd == num)
+        {
+            printf("水仙花数字：%d\n", num);    
+        }/*else{
+        	printf("%d\n%d\n%d\n",hd,td,sd);
+        }*/
+    }
+    return 0;    
 }
